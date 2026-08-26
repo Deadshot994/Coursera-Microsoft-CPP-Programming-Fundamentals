@@ -1,0 +1,19 @@
+Full Compilation: g++ demo.cpp link.cpp -o demo
+
+Compilation Process:
+    Compilation: g++ -S demo.cpp link.cpp
+        Output: Assembly files (.s extension)
+    Assembly: g++ -c demo.s link.s
+        Output: Onejct files (.o extension)
+    Linking: g++ demo.o link.o -o demo
+        Output: executable file (.exe extension)
+
+Compiler Warning Commands:
+    g++ demo.cpp link.cpp -Wall -Werror -Wextra -Wconversion -o demo
+
+Optimizing Code Command: To make it run faster
+    g++ demo.cpp link.cpp -Wall -O2 -o demo
+
+Debugging using gdb: 
+        g++ -g demo.cpp link.cpp -o demo
+        gdb demo

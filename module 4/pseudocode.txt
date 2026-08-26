@@ -1,0 +1,17 @@
+BEGIN
+    READ number n
+
+    if n < 0 THEN
+        PRINT "ERROR: NEGATIVE NUMBER"
+        STOP
+    END IF
+
+    SET RESULT = 1
+    SET COUNTER = 1
+    WHILE COUNTER <= n DO
+        SET RESULT = RESULT * COUNTER
+        SET COUNTER = COUNTER + 1
+    END WHILE
+    
+    PRINT "Factorial of" n "is result"
+END

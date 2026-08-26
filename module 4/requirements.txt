@@ -1,0 +1,7 @@
+Write a prgram that calculates teh factorial of a non negative integer n,
+where factorial(n) = n x (n-1) x (n-2) ... x 1
+
+Input: integer, non-negative, (0, 1+)
+Output: n!
+Constraints: n must be non-negative (0! will need to be handled, = 1)
+Method: iterative approach for clarity and efficiency
