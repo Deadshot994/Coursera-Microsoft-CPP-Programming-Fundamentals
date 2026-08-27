@@ -1,0 +1,6 @@
+main()
+    displayMenu()
+    temperatureConverter()
+    textEncrytpDecrypt()
+    baseConverter()
+    fileInfo()

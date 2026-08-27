@@ -1,0 +1,2 @@
+Compilation: g++ .\main.cpp .\menu.cpp .\temperatureConverter.cpp .\baseConverter.cpp .\fileInfo.cpp .\textProcessor.cpp -I./includes -std=c++17 -o utility.exe
+Run: .\utility.exe

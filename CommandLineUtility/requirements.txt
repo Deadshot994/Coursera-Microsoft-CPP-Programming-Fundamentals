@@ -1,0 +1,56 @@
+Files: 
+    main.cpp :
+        contains main program logic
+        menu system
+        application interface
+
+    utility.h:
+        declare common functions
+
+Requirements:
+    1. A Main menu interface that allows user to select between 4 utility functions
+    2. Four distinct utility functions
+    3. Perform input validations
+    4. Clear feedback to user anout operations and errors
+    5. Well organized, commented code
+
+Suggested utility functions:
+
+    1. Calculators:
+
+        Basic calculator (addition, subtraction, multiplication, division)
+
+        Mortgage/loan payment calculator
+
+        BMI calculator
+
+        Temperature converter
+    
+    2. Text utilities:
+        Word and character counter
+
+        Text case converter (uppercase, lowercase, title case)
+
+        Simple text encrypter/decrypter
+
+        Palindrome checker
+    
+    3. Number Processors:
+
+        Prime number checker
+
+        Number base converter (binary, decimal, hex)
+
+        Statistical calculator (mean, median, mode)
+
+        Fibonacci sequence generator
+    
+    4. Other Utilities:
+
+        Random password generator
+
+        Simple file information utility
+
+        Unit converter (length, weight, volume)
+
+        Date difference calculator
