@@ -4,6 +4,9 @@
 
 using namespace std;
 
+const int BINARY_BASE = 2;
+const int HEX_BASE = 16;
+
 void decToBin();
 void decToHex();
 
@@ -50,10 +53,10 @@ void decToBin() {
         }
 
         while (decimal > 0) {
-            remainder = decimal % 2;
+            remainder = decimal % BINARY_BASE;
             result = result + (remainder * place);
 
-            decimal = decimal / 2;
+            decimal = decimal / BINARY_BASE;
             place = place * 10;
         }
 
@@ -81,7 +84,7 @@ void decToHex() {
         }
 
         while(decimal > 0) {
-            remainder = decimal % 16;
+            remainder = decimal % HEX_BASE;
 
             if(remainder < 10) {
                 hex += char('0' + remainder);
@@ -90,7 +93,7 @@ void decToHex() {
                 hex += char('A' + (remainder - 10)); 
             }
 
-            decimal /= 16;
+            decimal /= HEX_BASE;
         }
         reverse(hex.begin(), hex.end());
 

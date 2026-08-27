@@ -4,14 +4,16 @@
 
 using namespace std;
 
+const int ALPHABET_SIZE = 26;
+
 void encrypt();
 void decrypt();
 
 void textEncryptDecrypt() {
     cout << "\n===== TEXT ENCRYPT/DECRYPT =====\n" << endl;
-    cout << "1. Encrypt\n" << endl;
-    cout << "2. Decrypt\n" << endl;
-    cout << "3. Exit\n" << endl;
+    cout << "1. Encrypt" << endl;
+    cout << "2. Decrypt" << endl;
+    cout << "3. Exit" << endl;
     cout << "Choose Option: ";
 
     int option = 0;
@@ -27,13 +29,13 @@ void textEncryptDecrypt() {
             decrypt();
             break;
         default:
-            cout << "\nInvalid Option" << endl;
+            cout << "Invalid Option" << endl;
             break;
         }
     }
 }
 void encrypt() {
-    cout << "\nEnter String: \n" << endl;
+    cout << "Enter String: " << endl;
 
     string txt;
     cin.ignore();
@@ -48,16 +50,16 @@ void encrypt() {
     if(lShift > 0) {
         for (char c : txt) {
             if (c >= 'A' && c <= 'Z') {
-                c = 'A' + (c - 'A' + lShift) % 26;
+                c = 'A' + (c - 'A' + lShift) % ALPHABET_SIZE;
             }
             else if (c >= 'a' && c <= 'z') {
-                c = 'a' + (c - 'a' + lShift) % 26;
+                c = 'a' + (c - 'a' + lShift) % ALPHABET_SIZE;
             }
 
             encrypted += c;
         }
 
-        cout << "\nEncrypted: " << encrypted << endl;
+        cout << "Encrypted: " << encrypted << endl;
     }
     else {
         cout << "Shift must be greater than 0." << endl;
@@ -82,10 +84,10 @@ void decrypt() {
         for (char c : txt) {
 
             if (c >= 'A' && c <= 'Z') {
-                c = 'A' + (c - 'A' - lShift + 26) % 26;
+                c = 'A' + (c - 'A' - lShift + ALPHABET_SIZE) % ALPHABET_SIZE;
             }
             else if (c >= 'a' && c <= 'z') {
-                c = 'a' + (c - 'a' - lShift + 26) % 26;
+                c = 'a' + (c - 'a' - lShift + ALPHABET_SIZE) % ALPHABET_SIZE;
             }
 
             decrypted += c;
